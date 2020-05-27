@@ -244,9 +244,9 @@ prims be =
   , Prims.bpIntMax = pure2 max
 
     -- Array operations
-  , Prims.bpArrayConstant = error "bpArrayConstant unimplemented for backend"
-  , Prims.bpArrayLookup = error "bpArrayLookup unimplemented for backend"
-  , Prims.bpArrayUpdate = error "bpArrayUpdate unimplemented for backend"
+  , Prims.bpArrayConstant = unsupportedAIGPrimitive "bpArrayConstant"
+  , Prims.bpArrayLookup = unsupportedAIGPrimitive "bpArrayLookup"
+  , Prims.bpArrayUpdate = unsupportedAIGPrimitive "bpArrayUpdate"
   }
 
 unsupportedAIGPrimitive :: String -> a
